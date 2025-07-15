@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="gallery-container">
+        <h1>Interactive Photo Gallery</h1>
+        
+        <div class="instructions">
+            <h3>How it works:</h3>
+            <ul>
+                <li>Hover over any image in the gallery below to see the preview update</li>
+                <li>The preview image and text will change when you hover over different images</li>
+                <li>Move your mouse away to see the preview return to the default state</li>
+                <li>Open the browser console to see the event logging in action</li>
+            </ul>
+        </div>
+        
+        <div class="gallery">
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Mountain landscape with snow-capped peaks"
+                 data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=250&fit=crop" 
+                     alt="Mountain landscape" 
+                     class="gallery-image">
+                <div class="image-overlay">Mountain Views</div>
+            </div>
+            
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Serene ocean waves at sunset"
+                 data-src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=300&h=250&fit=crop" 
+                     alt="Ocean sunset" 
+                     class="gallery-image">
+                <div class="image-overlay">Ocean Sunset</div>
+            </div>
+            
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Dense forest with tall trees and sunlight"
+                 data-src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=250&fit=crop" 
+                     alt="Forest path" 
+                     class="gallery-image">
+                <div class="image-overlay">Forest Path</div>
+            </div>
+            
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Colorful cityscape at night with lights"
+                 data-src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=250&fit=crop" 
+                     alt="City lights" 
+                     class="gallery-image">
+                <div class="image-overlay">City Lights</div>
+            </div>
+            
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Desert landscape with sand dunes"
+                 data-src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=300&h=250&fit=crop" 
+                     alt="Desert dunes" 
+                     class="gallery-image">
+                <div class="image-overlay">Desert Dunes</div>
+            </div>
+            
+            <div class="image-container" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()"
+                 data-alt="Peaceful lake with reflection of mountains"
+                 data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=300&h=250&fit=crop" 
+                     alt="Lake reflection" 
+                     class="gallery-image">
+                <div class="image-overlay">Lake Reflection</div>
+            </div>
+        </div>
+        
+        <div class="preview-section">
+            <h2>Image Preview</h2>
+            <img id="image" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop" alt="Default preview">
+            <div id="image-text">Hover over an image above to display here.</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
